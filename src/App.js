@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        this is a class base component
+        testing for git
       </div>
     )
   }
