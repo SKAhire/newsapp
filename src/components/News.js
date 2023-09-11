@@ -59,12 +59,12 @@ export default class News extends Component {
 
         return (
             <div className='container my-3'>
-                <h1 className='text-center'>Newapp - Top Headings</h1>
+                <h1 className='text-center my-3'>Newapp - Top Headings</h1>
                 {this.state.loading && <Spinner />}
                 <div className="row" >
                     {!this.state.loading && this.state.articles.map((elements) => {
-                        return <div className="col-md-3 my-2" key={elements.url}>
-                            <NewsItem title={elements.title ? elements.title.slice(0, 40) : ""} description={elements.description ? elements.description.slice(0, 90) : ""} imageUrl={elements.urlToImage} newsUrl={elements.url} />
+                        return <div className="col-md-3 my-3" key={elements.url}>
+                            <NewsItem title={elements.title ? elements.title.slice(0, 40) : ""} description={elements.description ? elements.description.slice(0, 90) : ""} imageUrl={elements.urlToImage} newsUrl={elements.url} author={elements.author} date={elements.publishedAt} source={elements.source.name} />
                         </div>
                     })}
                 </div>
