@@ -32,6 +32,57 @@ export default class Navbar extends Component {
                     About
                   </a>
                 </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="/"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Categories
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a className="dropdown-item" href="/">
+                      Business
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/">
+                      Entertainment
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/">
+                      General
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/">
+                      Health
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/">
+                      Science
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/">
+                      Sports
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/">
+                      Technology
+                      </a>
+                    </li>
+                          
+                  </ul>
+                </li>
+
               </ul>
             </div>
           </div>
