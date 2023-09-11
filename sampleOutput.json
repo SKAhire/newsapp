@@ -1,0 +1,58 @@
+{
+    "status": "ok",
+    "totalResults": 4,
+    "articles": [
+        {
+            "source": {
+                "id": "espn",
+                "name": "ESPN"
+            },
+            "author": null,
+            "title": "Purdue outlasts nearly six-hour delay for Walters' 1st win - ESPN",
+            "description": "In a game that started at 12 p.m. ET, ended at 9 p.m. ET, and included a weather delay that spanned five hours and 27 minutes on Saturday, Purdue outlasted Virginia Tech, 24-17, giving Boilermakers first-year coach Ryan Walters his first victory.",
+            "url": "https://www.espn.com/college-football/story/_/id/38364839/purdue-outlasts-nearly-six-hour-delay-walters-1st-win",
+            "urlToImage": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0910%2Fr1222372_1296x729_16%2D9.jpg",
+            "publishedAt": "2023-09-10T01:44:00Z",
+            "content": "BLACKSBURG, Va. -- Hudson Card threw for 248 yards and rushed for a score to lift Purdue to a 24-17 victory over Virginia Tech on Saturday after a weather delay stalled the contest for five hours and… [+1285 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Olena Harmash, Tom Balmforth",
+            "title": "Ukraine's counteroffensive to continue after onset of bad weather, spy chief says",
+            "description": "Ukraine's counteroffensive against Russian forces will continue through the onset of cold and wet weather later this year, even though it would become harder to fight, Kyiv's intelligence chief Kyrylo Budanov said on Saturday.",
+            "url": "https://www.reuters.com/world/europe/ukraines-counteroffensive-continue-after-onset-bad-weather-spy-chief-2023-09-09/",
+            "urlToImage": "https://www.reuters.com/resizer/Ew5PGY9qyvXmHlL5hBMmNdBXqzU=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/LFR4PJAHBFLT7MTD2AFIGHR4AU.jpg",
+            "publishedAt": "2023-09-09T19:05:16Z",
+            "content": "KYIV, Sept 9 (Reuters) - Ukraine's counteroffensive against Russian forces will continue through the onset of cold and wet weather later this year, even though it would become harder to fight, Kyiv's… [+2061 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "[Removed]"
+            },
+            "author": null,
+            "title": "[Removed]",
+            "description": "[Removed]",
+            "url": "https://removed.com",
+            "urlToImage": null,
+            "publishedAt": "1970-01-01T00:00:00Z",
+            "content": "[Removed]"
+        },
+        {
+            "source": {
+                "id": "techcrunch",
+                "name": "TechCrunch"
+            },
+            "author": "Anna Heim",
+            "title": "Rainbow or storm? | TechCrunch",
+            "description": "Some fintech companies are weathering the storm better than others and seeing an end in sight. Klarna's Q2 earnings, for instance, were unexpectedly good.",
+            "url": "https://techcrunch.com/2023/09/09/fintech-consolidation-ai/",
+            "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/07/GettyImages-1251416624.jpg?resize=1200,800",
+            "publishedAt": "2023-09-08T19:33:01Z",
+            "content": "Welcome to the TechCrunch Exchange, a weekly startups-and-markets newsletter. Its inspired by the daily TechCrunch+ column where it gets its name. Want it in your inbox every Saturday? Sign up here.\r… [+673 chars]"
+        }
+    ]
+}
