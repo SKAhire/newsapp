@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import NewsItem from './NewsItem';
 import Spinner from './Spinner';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
 
 
 
@@ -15,51 +16,54 @@ export default class News extends Component {
         country : PropTypes.string,
         pageSize : PropTypes.number,
     }
-    constructor() {
-        super();
+    capitalizeFirstLetter = (string)=>{
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    constructor(props) {
+        super(props);
         this.state = {
             articles: [],
             page: 1,
             loading: false,
             
         }
+        document.title = `${this.capitalizeFirstLetter(this.props.category)} - Newsapp`
     }
     async componentDidMount() {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8a9d3b69974c4aaa9ffa3bfeb0fa6b15&pageSize=${this.props.pageSize}`;
-        this.setState({loading: true})
-        let data = await fetch(url);
-        let parseData = await data.json();
-        this.setState({ articles: parseData.articles, totalResults: parseData.totalResults, loading: false, })
+        this.updateNews();
     }
-    handlePrevPage = async () => {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8a9d3b69974c4aaa9ffa3bfeb0fa6b15&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+    async updateNews() {
+        this.props.setProgress(10);
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         this.setState({loading: true})
+        this.props.setProgress(30);
         let data = await fetch(url);
+        this.props.setProgress(50);
         let parseData = await data.json();
+        this.props.setProgress(70);
+        this.setState({ articles: parseData.articles, totalResults: parseData.totalResults, loading: false, })
+        this.props.setProgress(100);
+    }
+
+    handlePrevPage = async () => {
         this.setState({
-            articles: parseData.articles,
-            page: this.state.page - 1,
-            loading: false,
+            page: this.state.page - 1
         })
+        this.updateNews();
     }
     handleNextPage = async () => {
         if (!(this.state.page + 1 > Math.ceil(this.state.totalResults /this.props.pageSize))) {
-            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8a9d3b69974c4aaa9ffa3bfeb0fa6b15&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
-            this.setState({loading: true})
-            let data = await fetch(url);
-            let parseData = await data.json();
             this.setState({
-                articles: parseData.articles,
-                page: this.state.page + 1,
-                loading: false,
+                page: this.state.page + 1
             })
+            this.updateNews();
         }
     }
     render() {
 
         return (
             <div className='container my-3'>
-                <h1 className='text-center my-3'>Newapp - Top Headings</h1>
+                <h1 className='text-center my-3'>Newapp - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
                 {this.state.loading && <Spinner />}
                 <div className="row" >
                     {!this.state.loading && this.state.articles.map((elements) => {
